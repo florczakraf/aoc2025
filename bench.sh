@@ -21,11 +21,9 @@ for s in $(find . -name '*py' | sort); do
         echo -n "${total_ms}"$'\u00a0'ms" | " >> "$s.stats"
     done
 
-    sum=0
-    for e in "${totals[@]}"; do
-        sum=$(("$sum" + "$e"))
-    done
-    echo "**$(("$sum" / "$N"))"$'\u00a0'"ms** |" >> "$s.stats"
+    # we discard slowest and fastest run from the average
+    avg=$(python3 -c "import sys; l=[int(x) for x in sys.argv[1:]]; l.remove(min(l)); l.remove(max(l)); print(sum(l)//len(l))" "${totals[@]}")
+    echo "**${avg}"$'\u00a0'"ms** |" >> "$s.stats"
 
     cat "$s.stats"
 done
