@@ -3,7 +3,7 @@ set -Eeuo pipefail
 
 N=5
 
-for s in $(find . -name '*py' | LC_COLLATE=C sort); do
+for s in $(find . -maxdepth 2 -name '*py' | LC_COLLATE=C sort); do
     if [ -f "$s.stats" ]; then
         cat "$s.stats"
         continue
