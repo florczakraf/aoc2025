@@ -1,16 +1,20 @@
-#!/usr/bin/env python3
+#!/usr/bin/env pypy3
 import sys
+#from functools import cache
 
 total = 0
 
 
 map = [list(l) for l in sys.stdin.read().splitlines()]
 
+#@cache
 def neighbors(y, x):
+    ns = []
     for dy in (-1, 0, 1):
         for dx in (-1, 0, 1):
             if 0 <= y + dy < len(map) and 0 <= x + dx < len(map[0]):
-                yield y + dy, x + dx
+                ns.append((y + dy, x + dx))
+    return ns
 
 def is_accessible(y, x):
     rolls = 0
