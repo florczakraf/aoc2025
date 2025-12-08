@@ -20,8 +20,8 @@ It happens that one of my computers runs on roughly 10 years old Intel i5-4460 s
 | [./06/solve_b.py](./06/solve_b.py) | python3 | 21 ms | 21 ms | 21 ms | 21 ms | 21 ms | **21 ms** |
 | [./07/solve_a.py](./07/solve_a.py) | python3 | 21 ms | 20 ms | 21 ms | 20 ms | 18 ms | **20 ms** |
 | [./07/solve_b.py](./07/solve_b.py) | python3 | 20 ms | 20 ms | 19 ms | 20 ms | 26 ms | **20 ms** |
-| [./08/solve_a.py](./08/solve_a.py) | pypy3 | 1093 ms | 1081 ms | 1146 ms | 1129 ms | 1154 ms | **1122 ms** |
-| [./08/solve_b.py](./08/solve_b.py) | pypy3 | 1124 ms | 1091 ms | 1117 ms | 1106 ms | 1088 ms | **1104 ms** |
+| [./08/solve_a.py](./08/solve_a.py) | pypy3 | 341 ms | 339 ms | 364 ms | 361 ms | 362 ms | **354 ms** |
+| [./08/solve_b.py](./08/solve_b.py) | pypy3 | 324 ms | 339 ms | 342 ms | 344 ms | 336 ms | **339 ms** |
 | [./_meta/pypy_startup.py](./_meta/pypy_startup.py) | pypy3 | 43 ms | 46 ms | 57 ms | 47 ms | 47 ms | **46 ms** |
 | [./_meta/python_startup.py](./_meta/python_startup.py) | python3 | 20 ms | 23 ms | 25 ms | 22 ms | 22 ms | **22 ms** |
 
